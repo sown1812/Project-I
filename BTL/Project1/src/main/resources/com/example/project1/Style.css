@@ -1,0 +1,118 @@
+
+/* Root variables for easy color and theme management */
+.root {
+/* Color Palette */
+    -primary-color: #2196F3;
+    -secondary-color: #4CAF50;
+    -background-color: #F5F5F5;
+    -text-color: #333333;
+    -accent-color: #FF5722;
+    /* Fonts */
+    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Global Styles */
+    -fx-font-family: -body-font;
+    -fx-background-color: -background-color;
+}
+
+/* Main Border Pane */
+.border-pane {
+    -fx-background-color: -background-color;
+    -fx-padding: 15px;
+}
+
+/* Control Box Styling */
+.hbox {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-padding: 10px;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 15px;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: derive(-primary-color, -20%);
+}
+
+.button:pressed {
+    -fx-background-color: derive(-primary-color, -40%);
+}
+
+/* Text Areas */
+.text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-control-inner-background: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.text-area .content {
+    -fx-background-color: white;
+}
+
+/* Text Fields */
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius:2px;
+    -fx-border-color: -primary-color;
+    -fx-border-radius: 2px;
+    -fx-padding: 2px;
+}
+
+/* Table View */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.table-view .column-header {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: derive(-primary-color, 80%);
+}
+
+/* Status Label */
+.status-label {
+    -fx-background-color: -secondary-color;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}
+
+/* Alert Dialog */
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-text-fill: -text-color;
+}
+
+.dialog-pane .header {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: white;
+}
+
+/* Responsive Sizing */
+.split-pane {
+    -fx-background-color: transparent;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: -primary-color;
+    -fx-pref-width: 2px;
+}
